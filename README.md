@@ -28,6 +28,10 @@
     mv any-font.zip ~/.fonts
     unzip ~/.fonts/any-font.zip
   </pre>
+
+  and you'll have your font installed
+
+  then, you need to <b>change your terminal font to that one</b>, so check your terminal emulator wiki to do that
   </p>
 
 </div>

@@ -88,6 +88,9 @@
   <p>
   Type in your terminal 
   <code>ls</code>
+
+  You can also see what's inside a directory
+  <code>ls directory/</code>
   
   <b>Options</b>
   <pre>

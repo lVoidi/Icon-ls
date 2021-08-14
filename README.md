@@ -4,7 +4,7 @@
 
 <div align="right">
   <p>
-    <ul>
+    <ul style='list-style: none;'>
       <li><a href="">Instalation</a></li>
       <li><a href="">Configuration</a></li>
       <li><a href="">Troubbleshooting</a></li>

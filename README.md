@@ -85,14 +85,14 @@
 
 <div>
   <h1 id="usage">Usage</h1>
-
   <p>
-    Available options
+  <b>Options</b>
+  <pre>
       -sh -a --show-hidden            Shows the hidden files
       -oh -hi --only-hidden           Shows ONLY the hidden files
       -ex --exclude                   Excludes a file extension, for example:
                                               ls -ex 'py'
                                               This will exclude all the python files
-    </pre>
+  </pre>
   </p>
 </div>

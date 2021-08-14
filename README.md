@@ -7,8 +7,7 @@
     <ul>
       <li><a href="#installation">Instalation</a></li>
       <li><a href="#usage">Usage</a></li>
-      <li><a href="">Configuration</a></li>
-      <li><a href="">Troubbleshooting</a></li>
+      <li><a href="#config">Configuration</a></li>
     </ul>
   </p>
 </div>
@@ -100,5 +99,27 @@
   </pre>
 
 
+  </p>
+</div>
+
+
+<div>
+  <h1 id="config">Configuration</h1>
+  <p>
+  All you need is in the class <b>Extensions</b>
+  It contains all the configuration options, you don't have to 
+  create any directory in .config, you just mofify the script itself.
+
+  <h2>Changing icons</h2>
+  All the icons are in the variable called <b>self.extensions</b>, 
+  it is just a python dictionary, you can add filetypes there with its icon,
+  you just need to add the dictionary item
+
+  <pre>
+    self.extensions = {
+      #... some items here
+      'filetype': '<icon>'
+    }
+  </pre>
   </p>
 </div>

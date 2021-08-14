@@ -164,6 +164,53 @@
     )
 
   </pre>
+  
+  As you can see in the commented lines, there are examples of 
+  how you can add a specific color to the filetype you want, the
+  colors are in rgb format, so the first element in the tupple represents
+  RED value, second element in the tupple represents GREEN value and the 
+  last element in the tupple represents blue value
+  
+  for example, this line: 
+  <code>python = (252, 244, 3) </code>
+  <br>
+  
+  This will show a yellow colour, based on python scheme
+
+  we can add this to our dictionary to make it look something like 
+  <pre>
+    self.filetype_color = dict(
+      # some lines of code..
+      python = (252, 244, 3)
+    )
+  </pre>
+
+  In order to this to work, we'll need to specify the file extension that this item is related to
+
+  To do this, we just need to go to the python function right below it and add a condition for this
+  extension. Don't worry! it's very easy! also, there are commented examples that you can use to guide.
+  
+  the condition has this syntax
+  <pre>
+    elif extension == 'filetype-extension':
+      return 'filetype'
+  </pre>
+
+  Is that easy! using python example...
+  <pre>
+    elif extension == 'py':
+      return 'python'
+  </pre>
+  
+  If the filetype you are refering to, has <b>more than one</b> extensions, you can
+  simply use a python list and the <b>in</b> statement
+
+  <pre>
+    elif extension in ['py',
+                       'pyc']
+  </pre>
+  
+  and that's it!
 
   </p>
 </div>

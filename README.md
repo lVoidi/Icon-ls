@@ -229,7 +229,7 @@
   
   <h3>Hidden files or dotfiles</h3>
   You can set the script to show hidden files by default,
-  by just changing <code>SHOW\_HIDDEN</code> variable to <b>True</b>
+  by just changing <code>SHOW_HIDDEN</code> variable to <b>True</b>
   <img src="https://media.discordapp.net/attachments/862479155022659604/875956540383854592/unknown.png?width=337&height=120" alt="showhidden">
   
   </p>

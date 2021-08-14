@@ -6,6 +6,7 @@
   <p>
     <ul>
       <li><a href="#installation">Instalation</a></li>
+      <li><a href="#usage">Usage</a></li>
       <li><a href="">Configuration</a></li>
       <li><a href="">Troubbleshooting</a></li>
     </ul>
@@ -80,4 +81,6 @@
 
 </div>
 
-
+<div>
+  <h1 id="usage">Usage</h1>
+</div>

@@ -86,13 +86,19 @@
 <div>
   <h1 id="usage">Usage</h1>
   <p>
+  Type in your terminal 
+  <code>ls</code>
+  
   <b>Options</b>
   <pre>
+      -h  --help                      Shows this dialog
       -sh -a --show-hidden            Shows the hidden files
       -oh -hi --only-hidden           Shows ONLY the hidden files
       -ex --exclude                   Excludes a file extension, for example:
                                               ls -ex 'py'
                                               This will exclude all the python files
   </pre>
+
+
   </p>
 </div>

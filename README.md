@@ -55,8 +55,8 @@
     cd
   </pre>
   
-  and then edit your shell config file
-  for this, you can use vim, neovim, emacs, nano or any other
+  and then edit your shell config file.
+  For this, you can use vim, neovim, emacs, nano or any other
   
   <pre>
     # USE YOUR TEXT EDITOR HERE

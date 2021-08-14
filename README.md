@@ -222,7 +222,7 @@
   <h2>Default options</h2>
   <h3>End</h3>
   You can change the separator between each line, the default separator is
-  a newline <code>\\n</code>, but you can use any other 
+  a newline <code>\n</code>, but you can use any other 
   
   just modify this line of code and change the end for whatever you want
   <img src="https://media.discordapp.net/attachments/862479155022659604/875956033716092938/unknown.png?width=488&height=259" alt="end">

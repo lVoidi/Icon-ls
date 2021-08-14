@@ -217,9 +217,26 @@
       return 'python'
   </pre>
   
-  
-
   and that's it!
 
+  <h2>Default options</h2>
+  <h3>End</h3>
+  You can change the separator between each line, the default separator is
+  a newline <code>\\n</code>, but you can use any other 
+  
+  just modify this line of code and change the end for whatever you want
+  <img src="https://media.discordapp.net/attachments/862479155022659604/875956033716092938/unknown.png?width=488&height=259" alt="end">
+  
+  <h3>Hidden files or dotfiles</h3>
+  You can set the script to show hidden files by default,
+  by just changing <code>SHOW\_HIDDEN</code> variable to <b>True</b>
+  <img src="https://media.discordapp.net/attachments/862479155022659604/875956540383854592/unknown.png?width=337&height=120" alt="showhidden">
+  
   </p>
+</div>
+
+-----
+
+<div>
+  <h1>Thanks for using my script!</h1>
 </div>

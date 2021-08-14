@@ -3,11 +3,12 @@ from sys import argv
 from pathlib import Path
 import random
 
-SHOW_HIDDEN = False
-ONLY_HIDDEN = False
-ONLY_DIRS = False
-EXCLUDED = []
-FILES = os.listdir()
+END             = '\n'
+SHOW_HIDDEN     = True
+ONLY_HIDDEN     = False
+ONLY_DIRS       = False
+EXCLUDED        = []
+FILES           = os.listdir()
 
 # Generates a random color
 RGB_COLOR = lambda: random.randint(200, 225)
@@ -226,21 +227,21 @@ Available options
     def print_(self, file):
         colorscheme = (RGB_COLOR(), RGB_COLOR(), RGB_COLOR())
 
-
         if self.colortype == 'custom':
             FILETYPE = self.return_filetype(file)
             colorscheme = self.filetype_color[FILETYPE]
             print(self.get_color_escape(*colorscheme),
                   self.file_icon(file),
-                  file)  
+                  file, end=END)  
         
         else:
             print(
                 self.get_color_escape(*colorscheme),
                 self.file_icon(file),
-                file)        
+                file, end=END)        
         
     def run_(self):
+        print('', end=END)
         for file_index in range(len(FILES)):
             self.print_(FILES[file_index])
 

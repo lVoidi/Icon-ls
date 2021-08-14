@@ -121,5 +121,47 @@
       'filetype': '<icon>'
     }
   </pre>
+
+  <h2>Changing colors</h2>
+  For this, will be a little more complex than just changing the icons.
+  First of all, we need to search for this line of code:
+  <pre>
+    # Change this to custom if you want                                                                                                                                                       
+    # to specify a color for each filetype                                                                                                                                                            # if it is custom, it will use self.filetype_color dictionary                                                                                                                             
+    # to the colorscheme                                                                                                                                                                      
+    self.colortype = 'rainbow'
+    # self.colortype = 'custom'  
+  </pre>
+  
+  Once found, you have to comment the line self.colortype = 'rainbow'
+  by adding a hash symbol at the start of the line, then, you need to
+  remove the comment from the line below of it.
+
+  after doing that, it will look something like this
+  <pre>
+    # Change this to custom if you want                                                                                                                                                       
+    # to specify a color for each filetype                                                                                                                                                            # if it is custom, it will use self.filetype_color dictionary                                                                                                                             
+    # to the colorscheme                                                                                                                                                                      
+    # self.colortype = 'rainbow'
+    self.colortype = 'custom'
+  </pre>
+
+  After doing this, we need to find also this line of code
+  
+  <pre>
+    # You can change the filetype color here
+    # or you can also add more customized filetypes
+    # the colors are in Red, Green and Blue format
+    #   filetype    =    (r, g, b)
+    self.filetype_color = dict(
+        directory = (230, 255, 230),
+        file = (255, 230, 230),
+        # Examples for different filetypes
+        # python = (252, 244, 3),
+        # lua = (0, 0, 255)
+    )
+
+  </pre>
+
   </p>
 </div>

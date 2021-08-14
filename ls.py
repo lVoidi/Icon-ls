@@ -21,7 +21,7 @@ class Extensions:
         # if it is custom, it will use self.filetype_color dictionary
         # to the colorscheme
         self.colortype = 'rainbow'
-
+        # self.colortype = 'custom'
         self.extensions = {
         'folder': '',
         '.config': '',

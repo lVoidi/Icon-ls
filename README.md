@@ -127,7 +127,8 @@
   First of all, we need to search for this line of code:
   <pre>
     # Change this to custom if you want                                                                                                                                                       
-    # to specify a color for each filetype                                                                                                                                                            # if it is custom, it will use self.filetype_color dictionary                                                                                                                             
+    # to specify a color for each filetype
+    # if it is custom, it will use self.filetype_color dictionary
     # to the colorscheme                                                                                                                                                                      
     self.colortype = 'rainbow'
     # self.colortype = 'custom'  
@@ -140,7 +141,8 @@
   after doing that, it will look something like this
   <pre>
     # Change this to custom if you want                                                                                                                                                       
-    # to specify a color for each filetype                                                                                                                                                            # if it is custom, it will use self.filetype_color dictionary                                                                                                                             
+    # to specify a color for each filetype
+    # if it is custom, it will use self.filetype_color dictionary                                                                                                                             
     # to the colorscheme                                                                                                                                                                      
     # self.colortype = 'rainbow'
     self.colortype = 'custom'

@@ -2,9 +2,9 @@
   <h1>Icon ls</h1>
 </div>
 
-<div align="right">
+<div>
   <p>
-    <ul style='list-style: none;'>
+    <ul>
       <li><a href="">Instalation</a></li>
       <li><a href="">Configuration</a></li>
       <li><a href="">Troubbleshooting</a></li>

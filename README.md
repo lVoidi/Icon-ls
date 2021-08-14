@@ -4,6 +4,11 @@
 
 <div align="right">
   <p>
-    XD
+    <ul>
+      <li><a href="">Instalation</a></li>
+      <li><a href="">Configuration</a></li>
+      <li><a href="">Troubbleshooting</a></li>
+    </ul>
   </p>
 </div>
+

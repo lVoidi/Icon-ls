@@ -31,7 +31,51 @@
 
   and you'll have your font installed
 
-  then, you need to <b>change your terminal font to that one</b>, so check your terminal emulator wiki to do that
+  then, you need to <b>change your terminal font to the installed one</b>, so check your terminal emulator wiki to do that
+
+  <hr>
+  
+  After installing the font, you can install the script now
+  <pre>
+    curl https://raw.githubusercontent.com/MrJakeSir/Icon-ls/master/ls.py -o path/to/script
+  </pre>
+
+  after you install the script, you have two options:
+
+  <ul>
+    <li>You can create a binary file by using <a href="https://www.pyinstaller.org/">pyinstaller</a> or py2bin</li>
+    <li>Or you can create a simple alias in your .zshrc to call the script</li>
+  </ul>
+
+  I will explain <b>the second option</b> because it is way easier and its the same thing
+  
+  we need to go our home directory
+  <pre>
+    cd
+  </pre>
+  
+  and then edit your shell config file
+  for this, you can use vim, neovim, emacs, nano or any other
+  
+  <pre>
+    # USE YOUR TEXT EDITOR HERE
+    
+    # For zsh
+    nvim .zshrc
+
+    # bash shell
+    nvim .bashrc
+  </pre>
+  
+  then, add this line to the end of your file, changing the <i>path/to/script.py</i> to your actual path 
+  
+  <pre>
+    alias ls="python3 path/to/script.py"
+  </pre>
+  
+  <b>restart your terminal</b> and you're done!
+  
+
   </p>
 
 </div>

@@ -1,5 +1,6 @@
 <div align="center">
   <h1>Icon ls</h1>
+  <img src="https://im2.ezgif.com/tmp/ezgif-2-c8980ffb162b.gif" alt="start">
 </div>
 
 <div>
@@ -96,6 +97,7 @@
       -ex --exclude                   Excludes a file extension, for example:
                                               ls -ex 'py'
                                               This will exclude all the python files
+      -od -d --only-dirs              This will display only the directories
   </pre>
 
 

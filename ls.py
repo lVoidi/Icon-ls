@@ -4,7 +4,7 @@ from pathlib import Path
 import random
 
 END             = '\n'
-SHOW_HIDDEN     = True
+SHOW_HIDDEN     = False
 ONLY_HIDDEN     = False
 ONLY_DIRS       = False
 EXCLUDED        = []
@@ -159,6 +159,8 @@ Available options
 -ex --exclude       \t\tExcludes a file extension, for example:
                     \t\t\tls -ex 'py'
                     \t\t\tThis will exclude all the python files
+
+-od -d --only-dirs  \t\tThis will display only the directories
                 ''')
 
     def show_files(self):

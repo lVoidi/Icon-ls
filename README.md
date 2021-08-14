@@ -23,11 +23,11 @@
   So to do this, we will download any font from <a href="https://nerdfonts.com/font-downloads" target='blank_'>here</a> and copy them to your fonts directory
 
   <h4>If you dont have the .fonts directory...</h4>
-  <code>
+  <pre>
     mkdir ~/.fonts
     mv any-font.zip ~/.fonts
     unzip ~/.fonts/any-font.zip
-  </code>
+  </pre>
   </p>
 
 </div>

@@ -197,6 +197,10 @@
     elif extension == 'filetype-extension':
       return 'filetype'
   </pre>
+  
+  yo need to add that line of code here
+
+  <img src="https://media.discordapp.net/attachments/862479155022659604/875953641855545424/unknown.png?width=696&height=454" alt="codeline">
 
   Is that easy! using python example...
   <pre>
@@ -209,9 +213,12 @@
 
   <pre>
     elif extension in ['py',
-                       'pyc']
+                       'pyc']:
+      return 'python'
   </pre>
   
+  
+
   and that's it!
 
   </p>

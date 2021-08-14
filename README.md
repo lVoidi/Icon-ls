@@ -110,7 +110,7 @@
   <p>
   All you need is in the class <b>Extensions</b>
   It contains all the configuration options, you don't have to 
-  create any directory in .config, you just mofify the script itself.
+  create any directory in .config, you just modify the script itself.
 
   <h2>Changing icons</h2>
   All the icons are in the variable called <b>self.extensions</b>, 

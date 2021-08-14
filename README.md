@@ -150,7 +150,7 @@
     self.colortype = 'custom'
   </pre>
 
-  After doing this, we need to find also this line of code
+  After doing this, we also need to find this line of code
   
   <pre>
     # You can change the filetype color here

@@ -11,7 +11,7 @@ EXCLUDED        = []
 FILES           = os.listdir()
 
 # Generates a random color
-RGB_COLOR = lambda: random.randint(200, 225)
+RGB_COLOR = lambda: random.randint(180, 255)
 
 class Extensions:
     def __init__(self):

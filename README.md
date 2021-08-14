@@ -167,7 +167,7 @@
 
   </pre>
   
-  'file' is the default colour the files
+  'file' is the default colour of the files
 
   As you can see in the commented lines, there are examples of 
   how you can add a specific color to the filetype you want, the

@@ -172,21 +172,21 @@ Available options
             if Path(file).suffix.lower().replace('.', '') in EXCLUDED:
                 pass
             
-                if SHOW_HIDDEN:
+            elif SHOW_HIDDEN:
+                new_files.append(file)
+                
+                
+            elif ONLY_DIRS:
+                if os.path.isdir(file):
                     new_files.append(file)
                 
+            elif ONLY_HIDDEN:
+                if self.is_hidden(file):
+                    new_files.append(file)
                 
-                if ONLY_DIRS:
-                    if os.path.isdir(file):
-                        new_files.append(file)
-                
-                elif ONLY_HIDDEN:
-                    if self.is_hidden(file):
-                        new_files.append(file)
-                
-                else:
-                    if not self.is_hidden(file):
-                        new_files.append(file)
+            else:
+                if not self.is_hidden(file):
+                    new_files.append(file)
     
         FILES = new_files
 

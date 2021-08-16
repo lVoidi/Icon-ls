@@ -148,6 +148,7 @@ class Ls(Extensions):
             
             elif arg in ['-h', '--help']:
                 self.help()
+                exit()
 
     def help(self):
         print('''

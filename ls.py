@@ -26,6 +26,7 @@ class Extensions:
         self.extensions = {
         'folder': '',
         '.config': '',
+        'iso': '',
         'conf': '',
         'lua': '',
         'html': '',
@@ -42,6 +43,8 @@ class Extensions:
         'pdf': '',
         'gz': '',
         'xz': '',
+        'bz2': '',
+        'bz': '',
         'zip': '',
         'rar': '',
         'cpp': '',
@@ -112,10 +115,7 @@ class Extensions:
         elif extension == 'lua':
             return 'lua'
 
-        '''
-        
-        
-        
+        '''       
         # If it is none of them, it will return 
         # the default value
         return 'file'
@@ -194,7 +194,7 @@ Available options
     
     def is_config_file(self, file):
         for config_ext in ['conf', 'rc']:
-            if self.is_hidden(file) or config_ext in file:
+            if self.is_hidden(file) or file.startswith(config_ext) or file.endswith(config_ext):
                 return True
 
         return False 
@@ -243,7 +243,6 @@ Available options
                 file, end=END)        
         
     def run_(self):
-        print('', end=END)
         for file_index in range(len(FILES)):
             self.print_(FILES[file_index])
 

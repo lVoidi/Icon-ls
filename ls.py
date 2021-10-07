@@ -115,7 +115,6 @@ class Extensions:
         
         elif extension == 'lua':
             return 'lua'
-
         '''       
         # If it is none of them, it will return 
         # the default value
@@ -155,13 +154,11 @@ class Ls(Extensions):
         print('''
 Thanks for using my script!
 Available options
-
 -sh -a --show-hidden\t\tShows the hidden files
 -oh -hi --only-hidden\t\tShows ONLY the hidden files
 -ex --exclude       \t\tExcludes a file extension, for example:
                     \t\t\tls -ex 'py'
                     \t\t\tThis will exclude all the python files
-
 -od -d --only-dirs  \t\tThis will display only the directories
                 ''')
 
@@ -235,13 +232,13 @@ Available options
             FILETYPE = self.return_filetype(file)
             colorscheme = self.filetype_color[FILETYPE]
             print(self.get_color_escape(*colorscheme),
-                  self.file_icon(file),
+                  self.file_icon(file), '\033[0m',
                   file, end=END)  
         
         else:
             print(
                 self.get_color_escape(*colorscheme),
-                self.file_icon(file),
+                self.file_icon(file), '\033[0m',
                 file, end=END)        
         
     def run_(self):

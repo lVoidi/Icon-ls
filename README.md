@@ -44,11 +44,12 @@
     curl https://raw.githubusercontent.com/MrJakeSir/Icon-ls/master/ls.py -o path/to/script
   </pre>
 
-  after you install the script, you have two options:
+  after you install the script, you have 3 options:
 
   <ul>
     <li>You can create a binary file by using <a href="https://www.pyinstaller.org/">pyinstaller</a> or py2bin</li>
-    <li>Or you can create a simple alias in your .zshrc to call the script</li>
+    <li>You can create a simple alias in your .zshrc to call the script</li>
+    <li>Or you can make the script executable</li>
   </ul>
 
   I will explain <b>the second option</b> because it is way easier and its the same thing
@@ -79,6 +80,8 @@
   
   <b>restart your terminal</b> and you're done!
   
+  <b>NOTE:</b>
+  To make your script executable use the command <b>chmod +x /path/to/script.py</b>
 
   </p>
 

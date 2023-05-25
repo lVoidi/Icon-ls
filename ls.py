@@ -24,6 +24,13 @@ class Extensions:
         # if it is custom, it will use self.filetype_color dictionary
         # to the colorscheme
         self.colortype = 'rainbow'
+        self.end = "\n"
+        self.show_hidden = False
+        self.only_hidden = False
+        self.only_dirs = False
+        self.excluded = []
+        self.files = os.listdir()
+        
         # self.colortype = 'custom'
         self.extensions = {
             'folder': '',
@@ -98,6 +105,9 @@ class Extensions:
             # python = (252, 244, 3),
             # lua = (0, 0, 255)
         )
+    
+    def generate_rgb_color(self) -> int:
+        return random.randint(180, 255)
     
     def return_filetype(self, file):
         
@@ -234,8 +244,8 @@ Available options
         colorscheme = (RGB_COLOR(), RGB_COLOR(), RGB_COLOR())
 
         if self.colortype == 'custom':
-            FILETYPE = self.return_filetype(file)
-            colorscheme = self.filetype_color[FILETYPE]
+            filetype = self.return_filetype(file)
+            colorscheme = self.filetype_color[filetype]
             print(self.get_color_escape(*colorscheme),
                   self.file_icon(file), '\033[0m',
                   file, end=END)  

@@ -5,16 +5,6 @@ from sys import argv
 from pathlib import Path
 import random
 
-END             = '\n'
-SHOW_HIDDEN     = False
-ONLY_HIDDEN     = False
-ONLY_DIRS       = False
-EXCLUDED        = []
-FILES           = os.listdir()
-
-# Generates a random color
-RGB_COLOR = lambda: random.randint(180, 255)
-
 class Extensions:
     def __init__(self):
         
@@ -135,9 +125,11 @@ class Extensions:
         # the default value
         return 'file'
 
+    
+"""
+This class will return every single file in a directory in colors 
+"""
 class Ls(Extensions):
-    
-    
     def __init__(self, args):
         self.args = args
         self.path = os.getcwd()
@@ -175,8 +167,12 @@ Available options
                     \t\t\tThis will exclude all the python files
 -od -d --only-dirs  \t\tThis will display only the directories
                 ''')
-
+    
+    
     def show_files(self):
+        """
+        This function will iterate through every single file with the specified flags
+        """
         new_files = []
         for file in self.files:
 
@@ -202,9 +198,15 @@ Available options
         self.files = sorted(new_files)
 
     def is_hidden(self, file):
+        """
+        Checks if a file is hidden, by checking if it has a dot in the start of its name
+        """
         return file.startswith('.')
     
     def is_config_file(self, file):
+        """
+        Checks if its a configuration file
+        """
         for config_ext in ['conf', 'rc']:
             if self.is_hidden(file) or file.startswith(config_ext) or file.endswith(config_ext):
                 return True
@@ -212,6 +214,9 @@ Available options
         return False 
 
     def file_icon(self, file: str):
+        """
+        Returns the relationed icon with the filename
+        """
         try:
             file_extension = Path(file).suffix.lower().replace('.', '')
 
@@ -238,6 +243,9 @@ Available options
         return f'\033[38;2;{r};{g};{b}m'
     
     def print_(self, file):
+        """
+        this will print the file with its icon
+        """
         colorscheme = (self.generate_rgb_color() for _ in range(3))
 
         if self.colortype == 'custom':
@@ -253,6 +261,9 @@ Available options
                 file, end=self.end)        
         
     def run_(self):
+        """
+        Prints every single file in a list
+        """
         for file_index in range(len(FILES)):
             self.print_(self.files[file_index])
 

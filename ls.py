@@ -139,26 +139,25 @@ class Ls(Extensions):
     
     
     def __init__(self, args):
-        global SHOW_HIDDEN, ONLY_HIDDEN, ONLY_DIRS, EXCLUDED, FILES
         self.args = args
         self.path = os.getcwd()
         super().__init__()
         # Available arguments
         for arg in args:
             if arg in ['-sh', '-a', '--show-hidden']:
-                SHOW_HIDDEN = True
+                self.show_hidden = True
 
             elif arg in ['-oh', '-hi', '--only-hidden']:
-                ONLY_HIDDEN = True
+                self.only_hidden = True
             
             elif arg in ['-od', '-d', '--only-dirs']:
-                ONLY_DIRS= True
+                self.only_dirs = True
             
             elif arg in ['-ex', '--exclude']:
-                EXCLUDED.append(args[args.index(arg)+1])
+                self.excluded.append(args[args.index(arg)+1])
 
             elif os.path.isdir(arg):
-                FILES=os.listdir(arg)
+                self.files = os.listdir(arg)
                 self.path = arg
             
             elif arg in ['-h', '--help']:
@@ -178,22 +177,21 @@ Available options
                 ''')
 
     def show_files(self):
-        global SHOW_HIDDEN, ONLY_HIDDEN, ONLY_DIRS, EXCLUDED, FILES
         new_files = []
-        for file in FILES:
+        for file in self.files:
 
-            if Path(file).suffix.lower().replace('.', '') in EXCLUDED:
+            if Path(file).suffix.lower().replace('.', '') in self.excluded:
                 pass
             
-            elif SHOW_HIDDEN:
+            elif self.show_hidden:
                 new_files.append(file)
                 
                 
-            elif ONLY_DIRS:
+            elif self.only_dirs:
                 if os.path.isdir(file):
                     new_files.append(file)
                 
-            elif ONLY_HIDDEN:
+            elif self.only_hidden:
                 if self.is_hidden(file):
                     new_files.append(file)
                 
@@ -201,7 +199,7 @@ Available options
                 if not self.is_hidden(file):
                     new_files.append(file)
     
-        FILES = sorted(new_files)
+        self.files = sorted(new_files)
 
     def is_hidden(self, file):
         return file.startswith('.')
@@ -214,7 +212,6 @@ Available options
         return False 
 
     def file_icon(self, file: str):
-        global SHOW_HIDDEN, ONLY_HIDDEN, ONLY_DIRS, EXCLUDED, FILES
         try:
             file_extension = Path(file).suffix.lower().replace('.', '')
 
@@ -241,24 +238,23 @@ Available options
         return f'\033[38;2;{r};{g};{b}m'
     
     def print_(self, file):
-        colorscheme = (RGB_COLOR(), RGB_COLOR(), RGB_COLOR())
+        colorscheme = (self.generate_rgb_color() for _ in range(3))
 
         if self.colortype == 'custom':
             filetype = self.return_filetype(file)
             colorscheme = self.filetype_color[filetype]
             print(self.get_color_escape(*colorscheme),
                   self.file_icon(file), '\033[0m',
-                  file, end=END)  
-        
+                  file, end=self.end)  
         else:
             print(
                 self.get_color_escape(*colorscheme),
                 self.file_icon(file), '\033[0m',
-                file, end=END)        
+                file, end=self.end)        
         
     def run_(self):
         for file_index in range(len(FILES)):
-            self.print_(FILES[file_index])
+            self.print_(self.files[file_index])
 
 
 ls = Ls(argv)

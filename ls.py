@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 from sys import argv
 from pathlib import Path

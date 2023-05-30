@@ -22,9 +22,9 @@
   <h1 id="installation">Installation</h1>
   
   <p>
-    The first thing that we need, are <a href="https://nerdfonts.com" target="blank_">the nerd fonts</a>, so we can see and personalize the icons in the script <br>
+    The first thing we need, are <a href="https://nerdfonts.com" target="blank_">the nerd fonts</a>, so we can see and personalize the icons in the script. <br>
   
-  So to do this, we will download any font from <a href="https://nerdfonts.com/font-downloads" target='blank_'>here</a> and copy them to your fonts directory
+  So to do this, we will download any font from <a href="https://nerdfonts.com/font-downloads" target='blank_'>here</a> and copy them to your fonts directory.
 
   <h4>If you dont have the .fonts directory...</h4>
   <pre>

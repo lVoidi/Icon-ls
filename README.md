@@ -44,7 +44,7 @@
     curl https://raw.githubusercontent.com/MrJakeSir/Icon-ls/master/ls.py -o path/to/script
   </pre>
 
-  after you install the script, you have 3 options:
+  After you install the script, you have 3 options:
 
   <ul>
     <li>You can create a binary file by using <a href="https://www.pyinstaller.org/">pyinstaller</a> or py2bin</li>

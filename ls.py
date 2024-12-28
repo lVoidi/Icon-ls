@@ -264,7 +264,7 @@ Available options
         """
         Prints every single file in a list
         """
-        for file_index in range(len(FILES)):
+        for file_index in range(len(self.files)):
             self.print_(self.files[file_index])
 
 

@@ -9,7 +9,8 @@
 <div>
   <p>
     <ul>
-      <li><a href="#installation">Instalation</a></li>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#docker">Docker</a></li>
       <li><a href="#usage">Usage</a></li>
       <li><a href="#config">Configuration</a></li>
     </ul>
@@ -72,6 +73,52 @@ It is required to have a terminal with nerd fonts installed: <a href="https://ne
 -----
 
 <div>
+  <h1 id="docker">Docker</h1>
+  
+  <p>
+    You can also run this tool using Docker. The Docker setup includes the required Nerd Fonts pre-installed.
+  
+  <h3>Using docker-compose (Recommended)</h3>
+  
+  <pre>
+    # Build and run the container
+    docker-compose run ls-icons
+
+    # To run in a specific directory
+    docker-compose run ls-icons directory/
+
+    # To run with options
+    docker-compose run ls-icons -sh
+  </pre>
+
+  <h3>Using Docker directly</h3>
+  
+  <pre>
+    # Build the image
+    docker build -t icon-ls .
+
+    # Run the container
+    docker run --rm -v $(pwd):/app icon-ls
+
+    # To run in a specific directory
+    docker run --rm -v $(pwd):/app -w /app icon-ls directory/
+
+    # To run with options
+    docker run --rm -v $(pwd):/app icon-ls -sh
+  </pre>
+
+  <b>Note:</b> The Docker setup includes:
+  <ul>
+    <li>Pre-installed DejaVuSansMono Nerd Font</li>
+    <li>Python 3.9 environment</li>
+    <li>Proper terminal color support</li>
+  </ul>
+  </p>
+</div>
+
+-----
+
+<div>
   <h1 id="usage">Usage</h1>
   <p>
   Type in your terminal 
@@ -94,6 +141,9 @@ It is required to have a terminal with nerd fonts installed: <a href="https://ne
 </div>
 
 -----
+
+
+
 
 <div>
   <h1>Thanks for using my script!</h1>

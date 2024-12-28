@@ -6,12 +6,10 @@ from ls import Extensions, Ls
 
 class TestExtensions(unittest.TestCase):
     def setUp(self):
-        # Crear un directorio temporal para las pruebas
         self.test_dir = tempfile.mkdtemp()
         self.old_dir = os.getcwd()
         os.chdir(self.test_dir)
         
-        # Crear algunos archivos de prueba
         open('.hidden_file', 'w').close()
         open('normal_file.txt', 'w').close()
         open('test.py', 'w').close()
@@ -21,7 +19,6 @@ class TestExtensions(unittest.TestCase):
         self.extensions = Extensions()
 
     def tearDown(self):
-        # Limpiar después de las pruebas
         os.chdir(self.old_dir)
         for root, dirs, files in os.walk(self.test_dir, topdown=False):
             for name in files:
